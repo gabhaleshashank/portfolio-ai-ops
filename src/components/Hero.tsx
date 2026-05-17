@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import { profile } from "../data/profile";
 import { socials } from "../data/socials";
-import { Badge } from "./ui/Badge";
 import { ButtonLink } from "./ui/Button";
 
 export function Hero() {
@@ -90,7 +89,6 @@ export function Hero() {
                 </p>
               </div>
             </div>
-            <Badge tone="amber">LIVE</Badge>
           </div>
 
           <div className="space-y-3 font-mono text-sm">
