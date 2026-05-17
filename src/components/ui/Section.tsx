@@ -20,7 +20,10 @@ export function Section({
   className,
 }: SectionProps) {
   return (
-    <section id={id} className={cn("scroll-mt-24 py-14 sm:py-20", className)}>
+    <section
+      id={id}
+      className={cn("scroll-mt-24 pt-5 pb-14 sm:pt-7 sm:pb-16", className)}
+    >
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         whileInView={{ opacity: 1, y: 0 }}

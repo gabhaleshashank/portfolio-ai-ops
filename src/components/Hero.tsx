@@ -19,7 +19,7 @@ export function Hero() {
   const linkedin = socials.find((social) => social.id === "linkedin");
 
   return (
-    <section id="top" className="relative overflow-hidden pt-12 sm:pt-16 lg:pt-20">
+    <section id="top" className="relative overflow-hidden pt-8 sm:pt-10 lg:pt-12">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lab-amber/40 to-transparent" />
       <div className="grid min-h-[calc(100vh-10rem)] items-center gap-10 py-8 lg:grid-cols-[1.08fr_0.92fr]">
         <motion.div
