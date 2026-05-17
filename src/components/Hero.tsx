@@ -62,7 +62,12 @@ export function Hero() {
                 LinkedIn
               </ButtonLink>
             ) : null}
-            <ButtonLink href={profile.resumeUrl} variant="outline">
+            <ButtonLink
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              variant="outline"
+            >
               <Download size={17} />
               Resume
             </ButtonLink>

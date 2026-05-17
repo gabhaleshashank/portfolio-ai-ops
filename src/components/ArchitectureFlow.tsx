@@ -1,20 +1,34 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, CircuitBoard } from "lucide-react";
-import { architectureFlow } from "../data/projects";
+import { pipelineFlows, type PipelineMode } from "../data/projects";
+import { PipelineModeToggle } from "./PipelineModeToggle";
 import { Section } from "./ui/Section";
 
 export function ArchitectureFlow() {
+  const [pipelineMode, setPipelineMode] = useState<PipelineMode>("software");
+  const activePipeline = pipelineFlows[pipelineMode];
+
   return (
     <Section
       id="architecture"
       eyebrow="System flow"
-      title="Sensor to AI Inspection Pipeline"
-      description="How environmental signals move through capture, detection, output, and monitoring."
+      title={activePipeline.label}
+      description={activePipeline.summary}
     >
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-white/10 bg-white/[0.03] p-3">
+        <p className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500">
+          {activePipeline.command}
+        </p>
+        <PipelineModeToggle
+          activeMode={pipelineMode}
+          onChange={setPipelineMode}
+        />
+      </div>
       <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-6">
-        {architectureFlow.map((item, index) => (
+        {activePipeline.steps.map((item, index) => (
           <motion.div
-            key={item.step}
+            key={`${pipelineMode}-${item.step}`}
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -36,7 +50,7 @@ export function ArchitectureFlow() {
                 {item.description}
               </p>
             </div>
-            {index < architectureFlow.length - 1 ? (
+            {index < activePipeline.steps.length - 1 ? (
               <div className="pointer-events-none hidden xl:block">
                 <ArrowRight
                   size={19}

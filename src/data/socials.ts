@@ -25,7 +25,7 @@ export const socials: SocialLink[] = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/gabhaleshashank",
     isExternal: true,
     note: "Placeholder link - replace with your profile URL later.",
   },

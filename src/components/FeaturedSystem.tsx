@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -7,12 +8,20 @@ import {
   HardDrive,
   Radar,
 } from "lucide-react";
-import { featuredSystem } from "../data/projects";
+import {
+  featuredSystem,
+  pipelineFlows,
+  type PipelineMode,
+} from "../data/projects";
+import { PipelineModeToggle } from "./PipelineModeToggle";
 import { Badge } from "./ui/Badge";
 import { ButtonLink } from "./ui/Button";
 import { Section } from "./ui/Section";
 
 export function FeaturedSystem() {
+  const [pipelineMode, setPipelineMode] = useState<PipelineMode>("software");
+  const activePipeline = pipelineFlows[pipelineMode];
+
   return (
     <Section
       id="featured-system"
@@ -62,9 +71,28 @@ export function FeaturedSystem() {
             </div>
           </div>
 
-          <div className="mt-5 rounded-lg border border-lab-purple/25 bg-lab-purple/10 p-4 font-mono text-xs text-purple-100">
-            <div className="mb-2 text-zinc-500">PIPELINE</div>
-            <div className="break-words">{featuredSystem.pipeline}</div>
+          <div className="mt-5 rounded-lg border border-lab-purple/25 bg-lab-purple/10 p-4">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <div className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500">
+                  Pipeline
+                </div>
+                <div className="mt-1 text-sm font-semibold text-purple-100">
+                  {activePipeline.label}
+                </div>
+              </div>
+              <PipelineModeToggle
+                activeMode={pipelineMode}
+                onChange={setPipelineMode}
+              />
+            </div>
+            <div className="mt-4 font-mono text-xs text-purple-100">
+              <div className="mb-2 text-zinc-500">$ {activePipeline.command}</div>
+              <div className="break-words">{activePipeline.line}</div>
+            </div>
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              {activePipeline.summary}
+            </p>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
