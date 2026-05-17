@@ -5,7 +5,6 @@ import {
   Github,
   Linkedin,
   MapPin,
-  RadioTower,
   Sparkles,
   Terminal,
 } from "lucide-react";
@@ -27,23 +26,16 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <Badge tone="green" className="mb-5">
-            <RadioTower size={13} />
-            {profile.status}
-          </Badge>
-          <div className="mb-5 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
-            <span className="inline-flex items-center gap-2">
-              <MapPin size={15} />
-              {profile.location}
-            </span>
-            <span className="font-mono text-lab-amber">ONLINE_BUILD_MODE</span>
-          </div>
           <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
             {profile.name}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
             {profile.subtitle}
           </p>
+          <div className="mt-4 flex items-center gap-2 text-base text-zinc-500">
+            <MapPin size={15} className="shrink-0 text-lab-amber" />
+            <span>{profile.location}</span>
+          </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="#featured-system" variant="primary">
               View Systems
