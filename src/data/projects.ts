@@ -20,19 +20,19 @@ export const projectFilters: ProjectFilter[] = [
 ];
 
 export const featuredSystem = {
-  code: "SYSTEM_01",
+  code: "System 01",
   title: "Seed Quality Detection using Enhanced YOLOv8",
-  status: "ACTIVE / ONGOING",
+  status: "Active / Ongoing",
   model: "YOLOv8 + OpenCV",
   hardware: "Raspberry Pi 4 Model B",
-  pipeline: "SENSOR -> CAMERA -> AI MODEL -> RESULT -> EMAIL ALERT",
-  visual: "/assets/seed-ai-system.png",
+  pipeline: "SENSOR -> CAMERA -> RESULT -> EMAIL ALERT",
+  visual: "/assets/seed_quality.png",
   description:
-    "An AI-powered seed quality detection system designed to automate manual seed inspection using computer vision, YOLOv8, Raspberry Pi, camera module, and environmental sensors.",
+    "An seed quality detection system designed to automate manual seed inspection using computer vision, YOLOv8, Raspberry Pi, camera module, and environmental sensors.",
   problem:
-    "Manual seed inspection is slow, inconsistent, and dependent on human observation.",
+    "Manual seed inspection is slow, inconsistent, and dependent on human observation which is prone towards errors and inaccuracies.",
   solution:
-    "A sensor-triggered AI inspection pipeline where abnormal gas/moisture readings can trigger image capture, YOLOv8 detects good/bad seeds, and the system displays results and sends alerts.",
+    "A sensor-triggered AI inspection pipeline where abnormal gas or moisture readings can trigger image capture, and the system sends alerts.",
   hardwareStack: [
     "Raspberry Pi 4 Model B",
     "Camera Module",
@@ -55,26 +55,26 @@ export const featuredSystem = {
     {
       label: "Current effectiveness",
       value: "~80%",
-      note: "Editable benchmark placeholder",
+      note: "Benchmark accuracy on test set",
     },
     {
-      label: "Classes",
-      value: "Good Seed / Bad Seed",
+      label: "Classification labels",
+      value: "Good / Bad / Impure",
       note: "Detection labels",
     },
     {
-      label: "Dataset",
-      value: "Add editable placeholder",
-      note: "Replace with final dataset summary",
+      label: "Datasets",
+      value: "2k+ annotated seed images",
+      note: "Maize & Wheat seeds with various conditions",
     },
     {
-      label: "Model",
+      label: "Object-detection Model",
       value: "YOLOv8 enhanced version",
       note: "Training target",
     },
     {
       label: "Deployment",
-      value: "Local Python UI / Raspberry Pi pipeline",
+      value: "Python UI / Raspberry Pi",
       note: "Edge workflow",
     },
   ],

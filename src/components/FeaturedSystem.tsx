@@ -30,8 +30,8 @@ export function FeaturedSystem() {
         >
           <div className="mb-5 flex flex-wrap items-center gap-2">
             <Badge tone="purple">{featuredSystem.code}</Badge>
-            <Badge tone="green">STATUS: {featuredSystem.status}</Badge>
-            <Badge tone="cyan">MODEL: {featuredSystem.model}</Badge>
+            <Badge tone="green">Status: {featuredSystem.status}</Badge>
+            <Badge tone="cyan">Model: {featuredSystem.model}</Badge>
           </div>
 
           <h3 className="text-balance text-2xl font-semibold text-white sm:text-3xl">
