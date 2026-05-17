@@ -103,14 +103,14 @@ export const pipelineFlows: Record<
   software: {
     label: "Software Pipeline",
     command: "run --software-pipeline",
-    line: "SENSOR READINGS -> TRIGGER LOGIC -> IMAGE CAPTURE -> YOLOV8 DETECTION -> RESULT UI -> ALERTS / STORAGE",
+    line: "REGISTRATION / LOGIN -> SELECT SEED TYPE -> UPLOAD INPUT IMAGE -> IMAGE PREPROCESSING -> YOLOv8 DETECTION -> RESULT UI",
     summary: "Python, trigger logic, YOLOv8 inference, local UI, alerts, and telemetry storage.",
     steps: architectureFlow,
   },
   hardware: {
     label: "Hardware Pipeline",
     command: "trace --hardware-pipeline",
-    line: "ENVIRONMENTAL SENSORS -> THRESHOLD SIGNAL -> CAMERA MODULE -> RASPBERRY PI CONTROL -> BUZZER / LOCAL OUTPUT -> MONITORING OUTPUT",
+    line: "ENVIRONMENTAL SENSORS READING -> TRIGGER LOGIC -> IMAGE CAPTURE -> ALERTS / SENSOR READING STORAGE",
     summary: "Sensor modules, Raspberry Pi, camera capture, buzzer, and monitoring output.",
     steps: [
       { step: "01", title: "Environmental Sensors", description: "MQ-135, MQ-2, moisture, and DHT11 capture the seed environment." },
