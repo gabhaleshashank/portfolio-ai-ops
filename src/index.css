@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(245, 158, 11, 0.04), transparent 28rem),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.03), transparent 38rem),
+    #050505;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.35);
+  color: white;
+}
+
+@layer components {
+  .glass-panel {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.035)
+    );
+    box-shadow: 0 16px 70px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(18px);
+  }
+
+  .data-cell {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(0, 0, 0, 0.22);
+    padding: 1rem;
+  }
+
+  .metric-tile {
+    min-height: 8.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.045);
+    padding: 1rem;
+    transition:
+      border-color 180ms ease,
+      background 180ms ease,
+      transform 180ms ease;
+  }
+
+  .metric-tile:hover {
+    transform: translateY(-2px);
+    border-color: rgba(245, 158, 11, 0.35);
+    background: rgba(245, 158, 11, 0.07);
+  }
+
+  .flow-card {
+    min-height: 13rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.045);
+    padding: 1rem;
+    transition:
+      border-color 200ms ease,
+      background 200ms ease,
+      transform 200ms ease;
+  }
+
+  .flow-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(245, 158, 11, 0.35);
+    background: rgba(245, 158, 11, 0.07);
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    min-height: 1.75rem;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.045);
+    padding: 0.25rem 0.65rem;
+    color: rgb(212 212 216);
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .icon-button {
+    display: inline-flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgb(161 161 170);
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      background 180ms ease;
+  }
+
+  .icon-button:hover {
+    border-color: rgba(245, 158, 11, 0.35);
+    background: rgba(245, 158, 11, 0.08);
+    color: white;
+  }
+
+  .icon-button:focus-visible {
+    outline: 2px solid #f59e0b;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .lab-grid {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .lab-grid::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(120deg, rgba(245, 158, 11, 0.045), transparent 42%);
+    background-size:
+      48px 48px,
+      48px 48px,
+      100% 100%;
+    mask-image: linear-gradient(180deg, black, rgba(0, 0, 0, 0.55) 60%, transparent);
+  }
+
+  .hover-glow {
+    transition:
+      border-color 200ms ease,
+      box-shadow 200ms ease,
+      transform 200ms ease;
+  }
+
+  .hover-glow:hover {
+    transform: translateY(-2px);
+    border-color: rgba(245, 158, 11, 0.32);
+    box-shadow:
+      0 0 0 1px rgba(245, 158, 11, 0.1),
+      0 18px 60px rgba(245, 158, 11, 0.08);
+  }
+
+  .pipeline-arrow {
+    animation: pulse-arrow 1.8s ease-in-out infinite;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes pulse-arrow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
