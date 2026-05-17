@@ -13,6 +13,7 @@ import { cn } from "../lib/utils";
 
 type CommandPaletteProps = {
   open: boolean;
+  onOpen: () => void;
   onClose: () => void;
 };
 
@@ -55,7 +56,7 @@ const commandItems = [
   },
 ];
 
-export function CommandPalette({ open, onClose }: CommandPaletteProps) {
+export function CommandPalette({ open, onOpen, onClose }: CommandPaletteProps) {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -65,6 +66,8 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
         event.preventDefault();
         if (open) {
           onClose();
+        } else {
+          onOpen();
         }
       }
 
@@ -75,7 +78,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose, open]);
+  }, [onClose, onOpen, open]);
 
   useEffect(() => {
     if (open) {

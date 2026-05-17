@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pt-12 sm:pt-16 lg:pt-20">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lab-amber/40 to-transparent" />
-      <div className="grid min-h-[calc(100vh-5rem)] items-center gap-10 py-8 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="grid min-h-[calc(100vh-10rem)] items-center gap-10 py-8 lg:grid-cols-[1.08fr_0.92fr]">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}

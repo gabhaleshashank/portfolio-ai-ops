@@ -18,7 +18,7 @@ export function FeaturedSystem() {
       id="featured-system"
       eyebrow="Primary module"
       title="Featured System"
-      description="Presented as an active system, not a static project card."
+      description="An active inspection module built around sensors, edge capture, computer vision, and alerting."
     >
       <div className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
         <motion.div

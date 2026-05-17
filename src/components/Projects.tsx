@@ -18,7 +18,7 @@ export function Projects() {
       id="projects"
       eyebrow="System catalog"
       title="Projects"
-      description="Four practical builds shown as system-style modules with editable tags, links, and statuses."
+      description="Practical builds across computer vision, web systems, APIs, and data-backed tools."
     >
       <div className="mb-6 flex flex-wrap gap-2 rounded-lg border border-white/10 bg-white/[0.03] p-2">
         {projectFilters.map((filter) => (

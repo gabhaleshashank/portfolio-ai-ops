@@ -27,7 +27,7 @@ export function About() {
       id="about"
       eyebrow="Builder profile"
       title="About"
-      description="First-person, practical, and focused on how the work gets built."
+      description="The working style behind these systems."
     >
       <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
         <motion.div

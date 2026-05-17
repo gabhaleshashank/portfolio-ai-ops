@@ -84,11 +84,10 @@ export function Header({ onOpenCommand }: HeaderProps) {
           <button
             type="button"
             onClick={onOpenCommand}
-            className="inline-flex h-10 items-center gap-2 rounded-lg border border-white/10 bg-white/[0.05] px-3 text-sm text-zinc-300 transition hover:border-lab-amber/30 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lab-amber"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.05] text-zinc-300 transition hover:border-lab-amber/30 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lab-amber"
             aria-label="Open quick navigation"
           >
             <Command size={16} />
-            <span className="hidden font-mono text-xs sm:inline">CTRL K</span>
           </button>
         </div>
       </div>

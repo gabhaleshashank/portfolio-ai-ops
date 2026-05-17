@@ -9,7 +9,7 @@ export function ArchitectureFlow() {
       id="architecture"
       eyebrow="System flow"
       title="Sensor to AI Inspection Pipeline"
-      description="A CSS-based architecture strip for the Raspberry Pi + sensor + YOLOv8 workflow."
+      description="How environmental signals move through capture, detection, output, and monitoring."
     >
       <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-6">
         {architectureFlow.map((item, index) => (

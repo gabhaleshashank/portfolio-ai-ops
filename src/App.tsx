@@ -20,6 +20,7 @@ export default function App() {
       <Header onOpenCommand={() => setCommandOpen(true)} />
       <CommandPalette
         open={commandOpen}
+        onOpen={() => setCommandOpen(true)}
         onClose={() => setCommandOpen(false)}
       />
       <main className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

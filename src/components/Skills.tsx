@@ -11,7 +11,7 @@ export function Skills() {
       id="skills"
       eyebrow="Tooling map"
       title="Skills"
-      description="Grouped by system layer, without progress bars or fake percentages."
+      description="Tools I use across interfaces, services, data, AI models, cloud, and automation workflows."
     >
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {skillGroups.map((group, index) => {
