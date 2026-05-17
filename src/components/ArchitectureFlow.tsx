@@ -23,12 +23,12 @@ export function ArchitectureFlow() {
           >
             <div className="flow-card">
               <div className="mb-4 flex items-center justify-between">
-                <span className="font-mono text-xs text-lab-amber">
+                <span className="font-mono text-xs text-lab-purple">
                   {item.step}
                 </span>
                 <CircuitBoard
                   size={18}
-                  className="text-zinc-600 transition group-hover:text-lab-amber"
+                  className="text-zinc-600 transition group-hover:text-lab-purple"
                 />
               </div>
               <h3 className="text-sm font-semibold text-white">{item.title}</h3>
@@ -40,7 +40,7 @@ export function ArchitectureFlow() {
               <div className="pointer-events-none hidden xl:block">
                 <ArrowRight
                   size={19}
-                  className="pipeline-arrow absolute -right-3 top-1/2 z-10 text-lab-amber"
+                  className="pipeline-arrow absolute -right-3 top-1/2 z-10 text-lab-purple"
                 />
               </div>
             ) : null}

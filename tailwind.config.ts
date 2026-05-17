@@ -12,8 +12,8 @@ const config: Config = {
           800: "#171719",
         },
         lab: {
-          amber: "#f59e0b",
-          amberSoft: "#fbbf24",
+          purple: "#a855f7",
+          purpleSoft: "#c084fc",
           green: "#22c55e",
           cyan: "#38bdf8",
         },
@@ -37,7 +37,8 @@ const config: Config = {
         ],
       },
       boxShadow: {
-        "amber-glow": "0 0 0 1px rgba(245, 158, 11, 0.14), 0 18px 60px rgba(245, 158, 11, 0.08)",
+        "purple-glow":
+          "0 0 0 1px rgba(168, 85, 247, 0.16), 0 18px 60px rgba(168, 85, 247, 0.1)",
       },
     },
   },

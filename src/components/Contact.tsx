@@ -18,7 +18,7 @@ export function Contact() {
       className="pb-10"
     >
       <div className="glass-panel relative overflow-hidden p-6 sm:p-8">
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lab-amber/60 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lab-purple/60 to-transparent" />
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">

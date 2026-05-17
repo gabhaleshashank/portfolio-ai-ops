@@ -18,7 +18,7 @@ export function Hero() {
 
   return (
     <section id="top" className="relative overflow-hidden pt-8 sm:pt-10 lg:pt-12">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lab-amber/40 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lab-purple/40 to-transparent" />
       <div className="grid min-h-[calc(100vh-10rem)] items-center gap-10 py-8 lg:grid-cols-[1.08fr_0.92fr]">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -32,7 +32,7 @@ export function Hero() {
             {profile.subtitle}
           </p>
           <div className="mt-4 flex items-center gap-2 text-base text-zinc-500">
-            <MapPin size={15} className="shrink-0 text-lab-amber" />
+            <MapPin size={15} className="shrink-0 text-lab-purple" />
             <span>{profile.location}</span>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -77,7 +77,7 @@ export function Hero() {
         >
           <div className="mb-4 flex items-center justify-between gap-3 border-b border-white/10 pb-4">
             <div className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-lab-amber/20 bg-lab-amber/10 text-lab-amber">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-lab-purple/20 bg-lab-purple/10 text-lab-purple">
                 <Terminal size={18} />
               </span>
               <div>
@@ -101,7 +101,7 @@ export function Hero() {
                 transition={{ delay: 0.18 + index * 0.06 }}
                 className="flex items-center gap-3 rounded-lg border border-white/10 bg-black/25 px-3 py-3 text-zinc-200"
               >
-                <Sparkles size={15} className="shrink-0 text-lab-amber" />
+                <Sparkles size={15} className="shrink-0 text-lab-purple" />
                 <span className="break-words">{item}</span>
               </motion.div>
             ))}
@@ -109,7 +109,7 @@ export function Hero() {
           <div className="mt-5 grid grid-cols-3 gap-2 border-t border-white/10 pt-4 text-center font-mono text-xs">
             <div>
               <p className="text-zinc-500">MODE</p>
-              <p className="mt-1 text-lab-amber">BUILD</p>
+              <p className="mt-1 text-lab-purple">BUILD</p>
             </div>
             <div>
               <p className="text-zinc-500">STACK</p>

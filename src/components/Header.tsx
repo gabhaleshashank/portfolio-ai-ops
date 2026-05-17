@@ -46,9 +46,9 @@ export function Header({ onOpenCommand }: HeaderProps) {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <a
           href="#top"
-          className="group flex min-w-0 items-center gap-3 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lab-amber"
+          className="group flex min-w-0 items-center gap-3 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lab-purple"
         >
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-lab-amber/30 bg-lab-amber/10 font-mono text-xs font-bold text-lab-amber">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-lab-purple/30 bg-lab-purple/10 font-mono text-xs font-bold text-lab-purple">
             SG
           </span>
           <span className="min-w-0">
@@ -66,7 +66,7 @@ export function Header({ onOpenCommand }: HeaderProps) {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-lg px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lab-amber"
+              className="rounded-lg px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lab-purple"
             >
               {item.label}
             </a>
@@ -106,7 +106,7 @@ export function Header({ onOpenCommand }: HeaderProps) {
           <button
             type="button"
             onClick={onOpenCommand}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.05] text-zinc-300 transition hover:border-lab-amber/30 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lab-amber"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.05] text-zinc-300 transition hover:border-lab-purple/30 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lab-purple"
             aria-label="Open quick navigation"
           >
             <Command size={16} />

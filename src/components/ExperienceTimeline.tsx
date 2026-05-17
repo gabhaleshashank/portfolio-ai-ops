@@ -22,18 +22,18 @@ export function ExperienceTimeline() {
             transition={{ duration: 0.42, delay: index * 0.06 }}
             className="relative pl-12 sm:pl-16"
           >
-            <span className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-lg border border-lab-amber/25 bg-graphite-900 text-lab-amber sm:left-2">
+            <span className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-lg border border-lab-purple/25 bg-graphite-900 text-lab-purple sm:left-2">
               <BriefcaseBusiness size={16} />
             </span>
             <div className="glass-panel p-5">
               <div className="mb-3 flex flex-wrap gap-2">
-                <Badge tone="amber">{experience.duration}</Badge>
+                <Badge tone="purple">{experience.duration}</Badge>
                 <Badge tone="neutral">
                   <MapPin size={12} />
                   {experience.location}
                 </Badge>
               </div>
-              <p className="text-sm font-medium text-lab-amber">
+              <p className="text-sm font-medium text-lab-purple">
                 {experience.organization}
               </p>
               <h3 className="mt-1 text-xl font-semibold text-white">
@@ -42,7 +42,7 @@ export function ExperienceTimeline() {
               <ul className="mt-4 space-y-3 text-sm leading-6 text-zinc-400">
                 {experience.points.map((point) => (
                   <li key={point} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-lab-amber" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-lab-purple" />
                     <span>{point}</span>
                   </li>
                 ))}

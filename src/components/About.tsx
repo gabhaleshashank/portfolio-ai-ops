@@ -57,7 +57,7 @@ export function About() {
                 className="glass-panel hover-glow p-4"
               >
                 <div className="flex gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-lab-amber/20 bg-lab-amber/10 text-lab-amber">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-lab-purple/20 bg-lab-purple/10 text-lab-purple">
                     <Icon size={18} />
                   </span>
                   <div>

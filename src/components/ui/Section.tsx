@@ -32,7 +32,7 @@ export function Section({
         className="mb-8 max-w-3xl"
       >
         {eyebrow ? (
-          <p className="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-lab-amber">
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-lab-purple">
             {eyebrow}
           </p>
         ) : null}

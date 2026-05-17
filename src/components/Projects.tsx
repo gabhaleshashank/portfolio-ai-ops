@@ -26,9 +26,9 @@ export function Projects() {
             key={filter}
             type="button"
             onClick={() => setActiveFilter(filter)}
-            className={`min-h-10 rounded-lg px-4 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-lab-amber ${
+            className={`min-h-10 rounded-lg px-4 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-lab-purple ${
               activeFilter === filter
-                ? "bg-lab-amber text-black"
+                ? "bg-lab-purple text-black"
                 : "text-zinc-400 hover:bg-white/[0.06] hover:text-white"
             }`}
           >
@@ -49,10 +49,10 @@ export function Projects() {
           >
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <Badge tone="cyan">{project.type}</Badge>
-              {project.status ? <Badge tone="amber">{project.status}</Badge> : null}
+              {project.status ? <Badge tone="purple">{project.status}</Badge> : null}
             </div>
             <div className="flex items-start gap-3">
-              <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-lab-amber/20 bg-lab-amber/10 text-lab-amber">
+              <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-lab-purple/20 bg-lab-purple/10 text-lab-purple">
                 <Layers3 size={19} />
               </span>
               <div className="min-w-0">
@@ -77,7 +77,7 @@ export function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-amber-200 transition hover:text-lab-amber"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-purple-200 transition hover:text-lab-purple"
                 >
                   <GitBranch size={16} />
                   GitHub Repo

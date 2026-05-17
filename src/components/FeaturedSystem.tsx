@@ -29,7 +29,7 @@ export function FeaturedSystem() {
           className="glass-panel p-5 sm:p-6"
         >
           <div className="mb-5 flex flex-wrap items-center gap-2">
-            <Badge tone="amber">{featuredSystem.code}</Badge>
+            <Badge tone="purple">{featuredSystem.code}</Badge>
             <Badge tone="green">STATUS: {featuredSystem.status}</Badge>
             <Badge tone="cyan">MODEL: {featuredSystem.model}</Badge>
           </div>
@@ -44,7 +44,7 @@ export function FeaturedSystem() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="data-cell">
               <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-white">
-                <Radar size={16} className="text-lab-amber" />
+                <Radar size={16} className="text-lab-purple" />
                 Problem
               </div>
               <p className="text-sm leading-6 text-zinc-400">
@@ -62,7 +62,7 @@ export function FeaturedSystem() {
             </div>
           </div>
 
-          <div className="mt-5 rounded-lg border border-lab-amber/25 bg-lab-amber/10 p-4 font-mono text-xs text-amber-100">
+          <div className="mt-5 rounded-lg border border-lab-purple/25 bg-lab-purple/10 p-4 font-mono text-xs text-purple-100">
             <div className="mb-2 text-zinc-500">PIPELINE</div>
             <div className="break-words">{featuredSystem.pipeline}</div>
           </div>
@@ -101,13 +101,13 @@ export function FeaturedSystem() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="data-cell">
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
-                <HardDrive size={16} className="text-lab-amber" />
+                <HardDrive size={16} className="text-lab-purple" />
                 Hardware
               </div>
               <ul className="space-y-2 text-sm text-zinc-400">
                 {featuredSystem.hardwareStack.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-lab-amber" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-lab-purple" />
                     <span>{item}</span>
                   </li>
                 ))}

@@ -110,7 +110,7 @@ export function CommandPalette({ open, onOpen, onClose }: CommandPaletteProps) {
     >
       <div className="w-full max-w-2xl overflow-hidden rounded-lg border border-white/10 bg-graphite-900 shadow-2xl">
         <div className="flex items-center gap-3 border-b border-white/10 px-4 py-3">
-          <Search size={18} className="shrink-0 text-lab-amber" />
+          <Search size={18} className="shrink-0 text-lab-purple" />
           <input
             ref={inputRef}
             value={query}
@@ -138,10 +138,10 @@ export function CommandPalette({ open, onOpen, onClose }: CommandPaletteProps) {
                   onClick={onClose}
                   className={cn(
                     "flex items-start gap-3 rounded-lg px-3 py-3 transition",
-                    "hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-lab-amber",
+                    "hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-lab-purple",
                   )}
                 >
-                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-lab-amber/20 bg-lab-amber/10 text-lab-amber">
+                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-lab-purple/20 bg-lab-purple/10 text-lab-purple">
                     <Icon size={17} />
                   </span>
                   <span className="min-w-0">

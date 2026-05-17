@@ -14,7 +14,7 @@ export function EngineeringNotes() {
       <div className="grid gap-4 lg:grid-cols-[0.82fr_1.18fr]">
         <div className="glass-panel p-5">
           <div className="mb-5 flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-lab-amber/20 bg-lab-amber/10 text-lab-amber">
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-lab-purple/20 bg-lab-purple/10 text-lab-purple">
               <TerminalSquare size={19} />
             </span>
             <div>
@@ -27,7 +27,7 @@ export function EngineeringNotes() {
             </div>
           </div>
           <div className="rounded-lg border border-white/10 bg-black/35 p-4 font-mono text-xs leading-6 text-zinc-400">
-            <p className="text-lab-amber">$ tail engineering-notes.log</p>
+            <p className="text-lab-purple">$ tail engineering-notes.log</p>
             <p className="mt-2">watching sensors...</p>
             <p>comparing camera input...</p>
             <p>checking model output...</p>
@@ -46,7 +46,7 @@ export function EngineeringNotes() {
               className="glass-panel hover-glow p-4"
             >
               <div className="mb-4 flex items-center justify-between">
-                <BookOpenText size={17} className="text-lab-amber" />
+                <BookOpenText size={17} className="text-lab-purple" />
                 <span className="font-mono text-[11px] text-zinc-600">
                   NOTE_{String(index + 1).padStart(2, "0")}
                 </span>

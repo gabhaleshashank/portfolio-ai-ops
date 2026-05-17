@@ -26,7 +26,7 @@ export function Skills() {
               className="glass-panel hover-glow p-5"
             >
               <div className="mb-5 flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-lab-amber/20 bg-lab-amber/10 text-lab-amber">
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-lab-purple/20 bg-lab-purple/10 text-lab-purple">
                   <Icon size={18} />
                 </span>
                 <h3 className="text-lg font-semibold text-white">{group.group}</h3>
