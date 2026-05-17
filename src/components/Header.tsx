@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Command, Github, Linkedin, Mail } from "lucide-react";
 import { profile } from "../data/profile";
 import { socials } from "../data/socials";
@@ -18,6 +19,27 @@ export function Header({ onOpenCommand }: HeaderProps) {
   const github = socials.find((social) => social.id === "github");
   const linkedin = socials.find((social) => social.id === "linkedin");
   const email = socials.find((social) => social.id === "email");
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    function updateScrollProgress() {
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const nextProgress =
+        scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+
+      setScrollProgress(Math.min(Math.max(nextProgress, 0), 1));
+    }
+
+    updateScrollProgress();
+    window.addEventListener("scroll", updateScrollProgress, { passive: true });
+    window.addEventListener("resize", updateScrollProgress);
+
+    return () => {
+      window.removeEventListener("scroll", updateScrollProgress);
+      window.removeEventListener("resize", updateScrollProgress);
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-graphite-950/80 backdrop-blur-xl">
@@ -90,6 +112,15 @@ export function Header({ onOpenCommand }: HeaderProps) {
             <Command size={16} />
           </button>
         </div>
+      </div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 -bottom-px h-[2px] overflow-hidden"
+      >
+        <div
+          className="h-full bg-gradient-to-r from-violet-500 via-fuchsia-400 to-purple-500 transition-[width] duration-150 ease-out"
+          style={{ width: `${scrollProgress * 100}%` }}
+        />
       </div>
     </header>
   );
